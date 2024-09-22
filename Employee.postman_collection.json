@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "23aebcf1-1de8-4964-9fbc-9418ac78d75c",
+		"name": "Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2751521"
+	},
+	"item": [
+		{
+			"name": "List of employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employees/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"employeeId\": 10,\r\n            \"firstName\": \"Peter\",\r\n            \"lastName\": \"Parker\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"employeeId\": 10,\r\n            \"firstName\": \"Peter Benjamin\",\r\n            \"lastName\": \"Parker\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employees/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employees/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List employees details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employees/details",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter employee details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employees/details/search?region=uk&pageNumber=2&pageSize=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"details",
+						"search"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "uk"
+						},
+						{
+							"key": "pageNumber",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network access",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/check/networkaccess?url=https://www.google.com/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"check",
+						"networkaccess"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.google.com/"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
